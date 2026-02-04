@@ -1,0 +1,83 @@
+4.
+4.1
+    b = (2 > 3)
+    b = False
+4.2
+    x = 3
+    x, y = x + 1, x + 1
+
+
+    x = 4
+    y = 4
+4.3
+    c = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[10]
+    c = 'K'
+4.4
+    ci = ord('ABCDEFGHIJKLMNOPQRSTUVWXYZ'[-16])
+       = ord('K')
+
+5.
+    nome = 'FERNANDO MANUEL'
+5.1
+    nome[3] = 'N'
+5.2
+    nome[3:6] = 'NAN'
+5.3
+    nome[3:] = 'NANDO MANUEL'
+5.4
+    nome[-3] = 'U'
+5.5
+    nome[-3:] = 'UEL'
+5.6 e 5.7
+    nome[0:-3] <=> nome[:-3] = 'FERNANDO MAN'
+
+
+
+6. R: 6.1, 6.3
+
+7.
+
+Import Decimal
+x = 10
+1+=x
+y = x + '1'
+input(y)
+------------------------------
+import decimal    OU    from decimal import Decimal
+x = 10
+x += 1
+y = x + int('1')  OU   y = str(x) + '1'
+z = input(y)     OU   input(y)    OU  y = input("Valor y = ")
+
+8.
+
+x, y = 2, 3
+print("XY -> " + str(x) + str(y))
+print("X+Y ->", x+y)
+x *= 6   # => 12
+y *= 2   # => 6
+print("X/Y ->", x/y)
+-------------------------------------
+XY -> 23
+X+Y -> 5
+X/Y -> 2.0
+
+================================================================================
+
+x = 'Alberto'
+print(x[0], x[3], x[-1], sep='/', end='$')
+print(x[2], x[4])
+----------------------------------------------------------
+A/e/o$b r
+
+
+================================================================================
+
+x, y = 3, 4           # x => 5  y => 4
+x, y = y + 1, x + 1
+z = 2**y + x          # 2**4 + 5 = 21
+print(x, y, z)
+--------------------------------------------------------
+5 4 21
+
+

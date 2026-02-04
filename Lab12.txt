@@ -1,0 +1,119 @@
+7.
+processos = {'ls': 192, 'grep': 321, 'init': 1}    # => {'ls': 292, 'grep': 321, 'init': 1, 'mkfs': 19}
+print('ls' in processos, 321 in processos)
+print((192 in processos)*2)
+processos.update(ls=292, mkfs=19)
+print(list(processos.items()))
+
+-----------------------------------------------------------
+
+True False
+0
+[('ls', 292), ('grep', 321), ('init', 1), ('mkfs', 19)]
+
+============================================================================
+
+txt = ''                    # => 'abc' => 'bc'
+nums = [10, 11]             # => []
+if nums:                    # if len(nums) > 0:
+    print("Um")
+    if not txt:             # if len(txt) == 0: 
+        print("Dois")
+        txt = 'abc'
+        nums = []
+    else:
+        print("Três")
+        txt = 'xey'
+        nums[-1:] = [12]
+txt = txt.replace('a', '').replace('e', '')
+print("Quatro" if len(nums) else "Cinco")
+print(txt if len(nums) == 0 else nums)
+
+---------------------------------------------------------
+
+Um
+Dois
+Cinco
+bc
+
+9.
+
+i = int(input("Valor de i: "))
+if i == 10:
+    print("Preparar operação")
+elif i == 5:
+    print("Começar operação")
+elif i == 0:
+    print("Missão crítica")
+else:
+    print("Operação abortada")
+
+----------------------------------------------
+
+i = int(input("Valor de i: "))
+match i:
+    case 10:
+        print("Preparar operação")
+    case 5:
+        print("Começar operação")
+    case 0:
+        print("Missão crítica")
+    case _:   # else, default
+        print("Operação abortada")
+
+==============================================================================
+
+nome = input("Nome? ")
+match nome:
+    case 'Alberto' | 'Armando':
+        print("Bom rapaz")
+    case 'Arnaldo' | 'Augusto':
+        print("Gente estranha...")
+    case _:
+        print("Desconheço...")
+
+------------------------------------------------------
+
+nome = input("Nome? ")
+if nome == 'Alberto' or nome == 'Armando':
+    print("Bom rapaz")
+elif nome == 'Arnaldo' or nome == 'Augusto':
+    print("Gente estranha...")
+else:
+    print("Desconheço...")
+
+OU
+
+nome = input("Nome? ")
+if nome in ('Alberto', 'Armando'):
+    print("Bom rapaz")
+elif nome in ('Arnaldo', 'Augusto'):
+    print("Gente estranha...")
+else:
+    print("Desconheço...")
+
+==============================================================================
+
+nums = ... # deve ser um tuplo com três valores
+           # mas pode haver um erro...
+if not isinstance(nums, tuple) or len(nums) != 3:
+    print("Conjunto inválido")
+elif nums[0] == 10:
+    print(nums[1] + nums[2])
+elif nums[0] == 1:
+    print(nums[1] * nums[2])
+else:
+    print("Conjunto inválido")
+
+---------------------------------------------------
+
+nums = ... # deve ser um tuplo com três valores
+           # mas pode haver um erro...
+match nums:
+    case (10, x, y):
+        print(x + y)
+    case (1, x, y):
+        print(x * y)
+    case _:
+        print("Conjunto inválido")
+
