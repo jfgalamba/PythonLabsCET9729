@@ -10,7 +10,7 @@ def main():
     print("1/P  - Pesquisar ocorrência")
     print("2/N  - Adicionar ocorrência")
     print("3/A  - Actualizar BD de ocorrências")
-    print("0/T  - Terminar")
+    print("0/T  - Terminar o programa")
 
     opcao = input("Opção: ");
 
