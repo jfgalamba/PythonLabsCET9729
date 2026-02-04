@@ -93,7 +93,7 @@ def clear_screen():
 #:
 
 def pause():
-    input("Pressione ENTER para continuar...")
+    input("Pressione ENTER para prosseguir...")
 #:
 
 if __name__ == '__main__':
